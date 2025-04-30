@@ -1,0 +1,65 @@
+.picklist-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.list-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.list {
+  width: 220px;
+  min-height: 300px;
+  max-height: 400px;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.side-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.controls-center {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Hide checkboxes */
+::ng-deep .mat-pseudo-checkbox,
+::ng-deep .mat-pseudo-checkbox.mat-pseudo-checkbox,
+::ng-deep .mat-mdc-list-item .mdc-checkbox,
+::ng-deep .mat-mdc-list-item .mdc-checkbox__native-control {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Highlight selected item */
+::ng-deep mat-list-option[aria-selected="true"],
+::ng-deep mat-list-option[aria-selected="true"]:hover,
+::ng-deep mat-list-option[aria-selected="true"]:focus {
+  background-color: #e3f2fd !important;
+  color: black !important;
+}
+
+/* Remove or comment out this block:
+.list.focused {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+*/
